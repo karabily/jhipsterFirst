@@ -1,0 +1,28 @@
+
+{
+    "myFirstJHipsterApp": {
+        "club" : {
+            "home": {
+                "title": "Clubs",
+                "createLabel": "Create a new Club",
+                "createOrEditLabel": "Create or edit a Club"
+            },
+            "created": "A new Club is created with identifier {{ param }}",
+            "updated": "A Club is updated with identifier {{ param }}",
+            "deleted": "A Club is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Club {{ id }}?"
+            },
+            "detail": {
+                "title": "Club"
+            },
+            "name": "Name",
+            "address": "Address",
+            "email": "Email",
+            "numberPhone1": "Number Phone 1",
+            "numberPhone2": "Number Phone 2",
+            "city": "City",
+            "country": "Country"
+        }
+    }
+}

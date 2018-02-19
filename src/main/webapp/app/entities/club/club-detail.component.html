@@ -1,0 +1,50 @@
+
+<div *ngIf="club">
+    <h2><span jhiTranslate="myFirstJHipsterApp.club.detail.title">Club</span> {{club.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="myFirstJHipsterApp.club.name">Name</span></dt>
+        <dd>
+            <span>{{club.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="myFirstJHipsterApp.club.address">Address</span></dt>
+        <dd>
+            <span>{{club.address}}</span>
+        </dd>
+        <dt><span jhiTranslate="myFirstJHipsterApp.club.email">Email</span></dt>
+        <dd>
+            <span>{{club.email}}</span>
+        </dd>
+        <dt><span jhiTranslate="myFirstJHipsterApp.club.numberPhone1">Number Phone 1</span></dt>
+        <dd>
+            <span>{{club.numberPhone1}}</span>
+        </dd>
+        <dt><span jhiTranslate="myFirstJHipsterApp.club.numberPhone2">Number Phone 2</span></dt>
+        <dd>
+            <span>{{club.numberPhone2}}</span>
+        </dd>
+        <dt><span jhiTranslate="myFirstJHipsterApp.club.city">City</span></dt>
+        <dd>
+            <span>{{club.city}}</span>
+        </dd>
+        <dt><span jhiTranslate="myFirstJHipsterApp.club.country">Country</span></dt>
+        <dd>
+            <span>{{club.country}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'club/'+ club.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
